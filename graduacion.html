@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Graduación - Detallitos JANA</title>
+
+    <link rel="stylesheet" href="graduacion.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!--======================
+BARRA SUPERIOR
+========================-->
+<div class="top-bar">
+    <i class="fa-solid fa-heart"></i>
+    Envíos a todo el país
+</div>
+
+<!--======================
+HEADER
+========================-->
+<header>
+
+    <div class="logo">
+        <a href="index.php"><img src="img/detallitolog.png" alt="Logo Detallitos JANA"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+
+            <!-- MENÚ DESPLEGABLE PRODUCTOS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-link">
+                    Productos <i class="fa-solid fa-chevron-down flecha"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="columna">
+                        <a href="graduacion.html" class="active-link">Graduación <span class="badge">Temporada</span></a>
+                        <a href="amor_aniversario.html">Amor y Aniversario</a>
+                        <a href="para_el.html">Para Él</a>
+                        <a href="ninos.html">Niños</a>
+                    </div>
+                    <div class="columna">
+                        <a href="cumpleanos.html">Cumpleaños</a>
+                        <a href="#">Condolencias</a>
+                        <a href="#">Matrimonio</a>
+                        <a href="#">Agradecimientos</a>
+                        <a href="#">Para Ella</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="pedidos.php">Pedidos Personalizados</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a href="catalogo.php" title="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="login.php" title="Iniciar sesión">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="carrito.php" class="carrito" title="Carrito de compras">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador">0</span>
+        </a>
+    </div>
+
+</header>
+
+<!--======================
+HERO BANNER GRADUACIÓN
+========================-->
+<section class="banner-graduacion">
+    <div class="contenido-banner">
+        <span class="etiqueta-banner">🎓 COLECCIÓN ESPECIAL</span>
+        <h1>Detalles de Graduación</h1>
+        <p>Inmortaliza el esfuerzo y celebra los grandes logros con nuestros arreglos exclusivos.</p>
+    </div>
+</section>
+
+<!--======================
+CATÁLOGO Y FILTROS
+========================-->
+<section class="seccion-graduacion">
+    
+    <!-- Filtros por Subcategoría -->
+    <nav class="subfiltros">
+        <button class="btn-filtro active" data-categoria="todos">Todos (20)</button>
+        <button class="btn-filtro" data-categoria="arreglos">Arreglos y Bouquets</button>
+        <button class="btn-filtro" data-categoria="peluches">Peluches Graduados</button>
+        <button class="btn-filtro" data-categoria="cajas">Cajas y Cuadros</button>
+        <button class="btn-filtro" data-categoria="tazas">Tazas y Tomatodos</button>
+    </nav>
+
+    <!-- Grid con 20 Productos -->
+<div class="contenedor-productos">
+
+    <!-- 1 -->
+    <div class="card-producto" data-categoria="arreglos">
+        <span class="tag">Popular</span>
+        <img src="https://via.placeholder.com/300x220?text=Ramo+12+Rosas+Rojas+con+Mini+Birrete" alt="Ramo de Rosas con Birrete" onerror="this.src='https://via.placeholder.com/300x220?text=Rosas+y+Birrete'">
+        <div class="card-body">
+            <h3>Ramo Classy Rosas & Birrete</h3>
+            <p>12 rosas rojas seleccionadas con un mini birrete artesanal.</p>
+            <div class="precio">S/ 75.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 1, 'Ramo Classy Rosas & Birrete', 75.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="card-producto" data-categoria="peluches">
+        <img src="https://via.placeholder.com/300x220?text=Oso+Peluche+45cm+con+Toga+Birrete+y+Diploma" alt="Oso Graduado XL" onerror="this.src='https://via.placeholder.com/300x220?text=Oso+Graduado+XL'">
+        <div class="card-body">
+            <h3>Oso de Peluche Graduado XL</h3>
+            <p>Peluche suave de 45cm con toga, birrete y diploma personalizado.</p>
+            <div class="precio">S/ 85.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 2, 'Oso de Peluche Graduado XL', 85.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="card-producto" data-categoria="cajas">
+        <span class="tag">Top Ventas</span>
+        <img src="https://via.placeholder.com/300x220?text=Box+Madera+Chocolates+Vino+y+Fotos" alt="Box Sorpresa Éxito" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Sorpresa+Exito'">
+        <div class="card-body">
+            <h3>Box Sorpresa "El Comienzo del Éxito"</h3>
+            <p>Caja de madera con chocolates finos, vino tinto y fotos del egresado.</p>
+            <div class="precio">S/ 110.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 3, 'Box Sorpresa El Comienzo del Éxito', 110.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card-producto" data-categoria="tazas">
+        <img src="https://via.placeholder.com/300x220?text=Taza+Magica+Sensible+al+Calor+Profesion" alt="Taza Mágica Profesión" onerror="this.src='https://via.placeholder.com/300x220?text=Taza+Magica+Profesion'">
+        <div class="card-body">
+            <h3>Taza Mágica Personalizada por Profesión</h3>
+            <p>Taza sensible al calor con nombre y carrera terminada.</p>
+            <div class="precio">S/ 35.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 4, 'Taza Mágica Personalizada', 35.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card-producto" data-categoria="arreglos">
+        <img src="https://via.placeholder.com/300x220?text=Bouquet+Globos+Helio+Estrella+y+Birrete+Gigante" alt="Bouquet de Globos Prom" onerror="this.src='https://via.placeholder.com/300x220?text=Bouquet+Globos+Prom'">
+        <div class="card-body">
+            <h3>Bouquet Giant "¡Lo Lograste!"</h3>
+            <p>Arreglo con globos de helio, estrella dorada y birrete gigante.</p>
+            <div class="precio">S/ 65.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 5, 'Bouquet Giant Lo Lograste', 65.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="card-producto" data-categoria="cajas">
+        <img src="https://via.placeholder.com/300x220?text=Marco+Vidrio+Diploma+Foto+y+Dedicatoria" alt="Cuadro de Recuerdos" onerror="this.src='https://via.placeholder.com/300x220?text=Cuadro+Recuerdos+Titulacion'">
+        <div class="card-body">
+            <h3>Cuadro Conmemorativo Titulación</h3>
+            <p>Marco de vidrio con espacio para diploma, foto y dedicatoria.</p>
+            <div class="precio">S/ 55.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 6, 'Cuadro Conmemorativo Titulación', 55.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="card-producto" data-categoria="peluches">
+        <img src="https://via.placeholder.com/300x220?text=Peluche+Personaje+con+Traje+Graduacion" alt="Peluche Temático Graduado" onerror="this.src='https://via.placeholder.com/300x220?text=Peluche+Tematico'">
+        <div class="card-body">
+            <h3>Peluche de Colección Graduado</h3>
+            <p>Personaje a elección vestido con traje de graduación oficial.</p>
+            <div class="precio">S/ 60.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 7, 'Peluche de Colección Graduado', 60.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="card-producto" data-categoria="arreglos">
+        <img src="https://via.placeholder.com/300x220?text=Ramo+5+Girasoles+Kraft+y+Dorados" alt="Ramo de Girasoles" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+de+Girasoles'">
+        <div class="card-body">
+            <h3>Ramo "Futuro Brillante" (Girasoles)</h3>
+            <p>5 girasoles frescos decorados con papel kraft y toques dorados.</p>
+            <div class="precio">S/ 70.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 8, 'Ramo Futuro Brillante Girasoles', 70.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="card-producto" data-categoria="tazas">
+        <img src="https://via.placeholder.com/300x220?text=Termo+Acero+Inox+Grabado+Laser" alt="Tomatodo Acero Graduado" onerror="this.src='https://via.placeholder.com/300x220?text=Tomatodo+Acero+Inox'">
+        <div class="card-body">
+            <h3>Tomatodo de Acero Inoxidable "Licenciado"</h3>
+            <p>Termo térmico grabado en láser con nombre y profesión.</p>
+            <div class="precio">S/ 48.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 9, 'Tomatodo Acero Licenciado', 48.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="card-producto" data-categoria="cajas">
+        <img src="https://via.placeholder.com/300x220?text=Caja+Explosiva+con+Fotos+y+Luces+LED" alt="Caja Explosiva Graduación" onerror="this.src='https://via.placeholder.com/300x220?text=Caja+Explosiva+Grad'">
+        <div class="card-body">
+            <h3>Caja Explosiva con Fotos y Luces LED</h3>
+            <p>Al abrirse despliega fotos del paso por la universidad y luces LED.</p>
+            <div class="precio">S/ 80.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 10, 'Caja Explosiva Fotos y Luces', 80.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="card-producto" data-categoria="arreglos">
+        <img src="https://via.placeholder.com/300x220?text=Flower+Box+Cilindrico+Flores+y+3+Cervezas" alt="Flower Box con Cervezas" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Flores+y+Cervezas'">
+        <div class="card-body">
+            <h3>Flower Box & Chelas de Celebración</h3>
+            <p>Caja cilíndrica con flores de estación y 3 cervezas artesanales.</p>
+            <div class="precio">S/ 90.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 11, 'Flower Box y Chelas', 90.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="card-producto" data-categoria="peluches">
+        <img src="https://via.placeholder.com/300x220?text=Oso+Mediano+Base+Madera+y+Globo+Metalizado" alt="Arreglo Oso y Globo" onerror="this.src='https://via.placeholder.com/300x220?text=Arreglo+Oso+y+Globo'">
+        <div class="card-body">
+            <h3>Mini Combo Oso & Globo Personalizado</h3>
+            <p>Oso mediano en base de madera con globo metalizado impreso.</p>
+            <div class="precio">S/ 55.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 12, 'Mini Combo Oso y Globo', 55.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="card-producto" data-categoria="tazas">
+        <img src="https://via.placeholder.com/300x220?text=Set+2+Tazas+Ceramicas+Graduados" alt="Dúo de Tazas Egresados" onerror="this.src='https://via.placeholder.com/300x220?text=Duo+Tazas+Graduados'">
+        <div class="card-body">
+            <h3>Dúo de Tazas Cerámicas "Graduados"</h3>
+            <p>Set de 2 tazas con diseños complementarios para colegas o amigos.</p>
+            <div class="precio">S/ 45.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 13, 'Dúo de Tazas Graduados', 45.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="card-producto" data-categoria="cajas">
+        <img src="https://via.placeholder.com/300x220?text=Caja+Forma+Diploma+Ferrero+Rocher" alt="Caja Chocolates Diploma" onerror="this.src='https://via.placeholder.com/300x220?text=Chocolates+en+Diploma'">
+        <div class="card-body">
+            <h3>Caja Temática "Choco-Diploma"</h3>
+            <p>Caja con forma de diploma rellena de bombones Ferrero Rocher.</p>
+            <div class="precio">S/ 50.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 14, 'Caja Temática Choco Diploma', 50.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="card-producto" data-categoria="arreglos">
+        <img src="https://via.placeholder.com/300x220?text=Flores+Crochet+Hechas+a+Mano+Birrete" alt="Ramo Eterno Tejido" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+Eterno+Crochet'">
+        <div class="card-body">
+            <h3>Ramo Eterno Tejido en Crochet</h3>
+            <p>Flores hechas a mano a crochet con birrete tejido. ¡Dura para siempre!</p>
+            <div class="precio">S/ 65.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 15, 'Ramo Eterno Tejido Crochet', 65.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="card-producto" data-categoria="cajas">
+        <img src="https://via.placeholder.com/300x220?text=Pisco+Quebranta+750ml+Grabado+Titanio" alt="Botella de Pisco Grabada" onerror="this.src='https://via.placeholder.com/300x220?text=Pisco+Personalizado'">
+        <div class="card-body">
+            <h3>Botella de Pisco Grabada con Escudo</h3>
+            <p>Pisco Quebranta 750ml grabado al titanio con el escudo de la universidad.</p>
+            <div class="precio">S/ 95.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 16, 'Botella Pisco Grabada Escudo', 95.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 17 -->
+    <div class="card-producto" data-categoria="peluches">
+        <img src="https://via.placeholder.com/300x220?text=Pack+3+Mini+Ositos+Llaveros+Graduados" alt="Pack Llaveros Graduación" onerror="this.src='https://via.placeholder.com/300x220?text=Pack+Llaveros+Grad'">
+        <div class="card-body">
+            <h3>Pack x3 Llaveros Peluche Graduados</h3>
+            <p>Mini ositos llaveros ideales para regalar a tus mejores compañeros.</p>
+            <div class="precio">S/ 40.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 17, 'Pack x3 Llaveros Peluche', 40.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="card-producto" data-categoria="tazas">
+        <img src="https://via.placeholder.com/300x220?text=Copa+Cristal+Grabada+Ano+y+Caja" alt="Copa de Brindis Grabada" onerror="this.src='https://via.placeholder.com/300x220?text=Copa+Brindis+Grabada'">
+        <div class="card-body">
+            <h3>Copa de Cristal para Brindis Graduación</h3>
+            <p>Copa grabada con nombre, año de graduación y caja de regalo.</p>
+            <div class="precio">S/ 38.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 18, 'Copa Cristal Brindis Graduación', 38.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 19 -->
+    <div class="card-producto" data-categoria="arreglos">
+        <img src="https://via.placeholder.com/300x220?text=Ramo+Chocolates+Galletas+y+Snacks" alt="Ramo de Golosinas" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+de+Golosinas'">
+        <div class="card-body">
+            <h3>Ramo Dulce "Snack Promo"</h3>
+            <p>Arreglo cargado con chocolates, galletas y snacks favoritos.</p>
+            <div class="precio">S/ 60.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 19, 'Ramo Dulce Snack Promo', 60.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+    <!-- 20 -->
+    <div class="card-producto" data-categoria="cajas">
+        <img src="https://via.placeholder.com/300x220?text=Agenda+Cuero+Sintetico+y+Lapicero+Metal" alt="Set Agenda y Lapicero" onerror="this.src='https://via.placeholder.com/300x220?text=Set+Agenda+y+Lapicero'">
+        <div class="card-body">
+            <h3>Set Executive Agenda & Lapicero Grabado</h3>
+            <p>Agenda de cuero sintético y lapicero de metal grabado con su nombre.</p>
+            <div class="precio">S/ 70.00</div>
+            <button class="btn-agregar" onclick="agregarAlCarrito(this, 20, 'Set Executive Agenda Lapicero', 70.00)">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Notificación Flotante Toast -->
+<div id="toast" class="toast"></div>
+
+<!--======================
+FOOTER INFO
+========================-->
+<footer>
+
+    <div>
+        <i class="fa-solid fa-box"></i>
+        <h3>Pedidos Personalizados</h3>
+        <p>Creamos el detalle perfecto</p>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Escríbenos por WhatsApp</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hecho con Amor</h3>
+        <p>Cada detalle importa</p>
+    </div>
+
+</footer>
+
+<script src="graduacion.js"></script>
+
+<script src="session-nav.js"></script>
+<script src="img-fallback.js"></script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor y Aniversario - Detallitos JANA</title>
+
+    <link rel="stylesheet" href="amor_aniversario.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!--======================
+BARRA SUPERIOR
+========================-->
+<div class="top-bar">
+    <i class="fa-solid fa-heart"></i>
+    Envíos a todo el país
+</div>
+
+<!--======================
+HEADER
+========================-->
+<header>
+
+    <div class="logo">
+        <a href="index.php"><img src="img/detallitolog.png" alt="Logo Detallitos JANA"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+
+            <!-- MENÚ DESPLEGABLE PRODUCTOS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-link">
+                    Productos <i class="fa-solid fa-chevron-down flecha"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="columna">
+                        <a href="graduacion.html">Graduación <span class="badge">Temporada</span></a>
+                        <a href="amor_aniversario.html" class="active-link">Amor y Aniversario</a>
+                        <a href="#">Nacimientos</a>
+                        <a href="#">Recupérate pronto</a>
+                        <a href="#">Para Él</a>
+                        <a href="#">Niños</a>
+                    </div>
+                    <div class="columna">
+                        <a href="#">Cumpleaños</a>
+                        <a href="#">Condolencias</a>
+                        <a href="#">Matrimonio</a>
+                        <a href="#">Agradecimientos</a>
+                        <a href="#">Para Ella</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="pedidos.php">Pedidos Personalizados</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a href="catalogo.php" title="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="login.php" title="Iniciar sesión">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="carrito.php" class="carrito" title="Carrito de compras">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador">0</span>
+        </a>
+    </div>
+
+</header>
+
+<!--======================
+HERO BANNER AMOR Y ANIVERSARIO
+========================-->
+<section class="banner-amor">
+    <div class="contenido-banner">
+        <span class="etiqueta-banner">💖 COLECCIÓN ROMÁNTICA</span>
+        <h1>Amor & Aniversario</h1>
+        <p>Expresa tus sentimientos más profundos con detalles inolvidables hechos para enamorar.</p>
+    </div>
+</section>
+
+<!--======================
+CATÁLOGO Y FILTROS
+========================-->
+<section class="seccion-amor">
+    
+    <!-- Filtros por Subcategoría -->
+    <nav class="subfiltros">
+        <button class="btn-filtro active" data-categoria="todos">Todos (20)</button>
+        <button class="btn-filtro" data-categoria="rosas">Rosas Eternas</button>
+        <button class="btn-filtro" data-categoria="cajas">Cajas Sorpresa</button>
+        <button class="btn-filtro" data-categoria="peluches">Peluches & Combos</button>
+        <button class="btn-filtro" data-categoria="personalizados">Personalizados</button>
+    </nav>
+
+    <!-- Grid con 20 Productos -->
+    <div class="contenedor-productos">
+
+        <!-- 1 -->
+        <div class="card-producto" data-categoria="rosas">
+            <span class="tag">Más Vendido</span>
+            <img src="img/amor/cúpula_bella_bestia.jpg" alt="Rosa Eterna Cúpula" onerror="this.src='https://via.placeholder.com/300x220?text=Cúpula+Rosa+Eterna'">
+            <div class="card-body">
+                <h3>Cúpula "La Bella y la Bestia"</h3>
+                <p>Rosa eterna preservada en cúpula de vidrio con Luces LED cálidas.</p>
+                <div class="precio">S/ 95.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 21, 'Cúpula La Bella y la Bestia', 95.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card-producto" data-categoria="cajas">
+            <span class="tag">Top Romántico</span>
+            <img src="img/amor/box_corazon_rosas.jpg" alt="Box Corazón de Rosas" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Corazón+Rosas'">
+            <div class="card-body">
+                <h3>Box Corazón Deluxe & Ferrero</h3>
+                <p>Caja en forma de corazón con 18 rosas rojas y chocolates Ferrero Rocher.</p>
+                <div class="precio">S/ 120.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 22, 'Box Corazón Deluxe & Ferrero', 120.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/amor/oso_gigante_te_amo.jpg" alt="Oso Gigante Te Amo" onerror="this.src='https://via.placeholder.com/300x220?text=Oso+Gigante+Te+Amo'">
+            <div class="card-body">
+                <h3>Oso Gigante "Te Amo" 80cm</h3>
+                <p>Peluche ultra suave con corazón bordado "Te Amo" y lazo elegante.</p>
+                <div class="precio">S/ 135.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 23, 'Oso Gigante Te Amo 80cm', 135.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card-producto" data-categoria="personalizados">
+            <img src="img/amor/lámpara_foto_acrilico.jpg" alt="Lámpara Acrílico Foto" onerror="this.src='https://via.placeholder.com/300x220?text=Lámpara+Acrílico+Foto'">
+            <div class="card-body">
+                <h3>Lámpara Acrílica Spotify Personalizada</h3>
+                <p>Grabada con foto de la pareja, canción favorita y código escaneable.</p>
+                <div class="precio">S/ 65.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 24, 'Lámpara Acrílica Spotify', 65.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card-producto" data-categoria="rosas">
+            <img src="img/amor/ramo_24_rosas.jpg" alt="Ramo 24 Rosas Rojas" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+24+Rosas'">
+            <div class="card-body">
+                <h3>Ramo Pasión (24 Rosas Rojas)</h3>
+                <p>Ramo de 24 rosas importadas envueltas en fino papel coreano.</p>
+                <div class="precio">S/ 140.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 25, 'Ramo Pasión 24 Rosas', 140.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/amor/caja_explosiva_amor.jpg" alt="Caja Explosiva Aniversario" onerror="this.src='https://via.placeholder.com/300x220?text=Caja+Explosiva+Amor'">
+            <div class="card-body">
+                <h3>Caja Explosiva "Nuestra Historia"</h3>
+                <p>Despliega más de 12 fotos, cartas ocultas y compartimento para regalo.</p>
+                <div class="precio">S/ 85.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 26, 'Caja Explosiva Nuestra Historia', 85.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/amor/combo_oso_rosas_vino.jpg" alt="Combo Romántico Vino" onerror="this.src='https://via.placeholder.com/300x220?text=Combo+Oso+Rosas+Vino'">
+            <div class="card-body">
+                <h3>Combo "Noche de Aniversario"</h3>
+                <p>Incluye peluche mediano, ramo de rosas y botella de vino tinto Riccadonna.</p>
+                <div class="precio">S/ 160.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 27, 'Combo Noche de Aniversario', 160.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card-producto" data-categoria="personalizados">
+            <img src="img/amor/cuadro_estelar.jpg" alt="Cuadro Mapa Estelar" onerror="this.src='https://via.placeholder.com/300x220?text=Cuadro+Mapa+Estelar'">
+            <div class="card-body">
+                <h3>Cuadro Mapa Estelar "El Día que Nos Conocimos"</h3>
+                <p>Muestra exactamente cómo estaban las estrellas en su fecha especial.</p>
+                <div class="precio">S/ 55.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 28, 'Cuadro Mapa Estelar', 55.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card-producto" data-categoria="rosas">
+            <img src="img/amor/rosa_negra_dorada.jpg" alt="Rosa Eterna Negra Dorada" onerror="this.src='https://via.placeholder.com/300x220?text=Rosa+Negra+Especial'">
+            <div class="card-body">
+                <h3>Rosa Eterna Black & Gold Edition</h3>
+                <p>Exclusiva rosa preservada negra con destellos de pan de oro en urna.</p>
+                <div class="precio">S/ 110.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 29, 'Rosa Eterna Black & Gold', 110.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/amor/box_sorpresa_globo_gas.jpg" alt="Box Globo Helio" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Globo+Helio'">
+            <div class="card-body">
+                <h3>Box Revelación "Love Balloon"</h3>
+                <p>Al abrir la caja sale volando un globo de helio personalizado con fotos.</p>
+                <div class="precio">S/ 90.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 30, 'Box Revelación Love Balloon', 90.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="card-producto" data-categoria="personalizados">
+            <img src="img/amor/duo_pulseras_distancia.jpg" alt="Pulseras Pareja Imán" onerror="this.src='https://via.placeholder.com/300x220?text=Dúo+Pulseras+Pareja'">
+            <div class="card-body">
+                <h3>Dúo de Pulseras Magnéticas + Caja de Regalo</h3>
+                <p>Pulseras de piedra volcánica que se unen por imán en empaque especial.</p>
+                <div class="precio">S/ 45.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 31, 'Dúo Pulseras Magnéticas', 45.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/amor/pareja_osos_novios.jpg" alt="Pareja de Osos Novios" onerror="this.src='https://via.placeholder.com/300x220?text=Pareja+Osos+Novios'">
+            <div class="card-body">
+                <h3>Set "Ositos Enamorados"</h3>
+                <p>Par de peluches vestidos de novios en canasta con chocolates finos.</p>
+                <div class="precio">S/ 75.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 32, 'Set Ositos Enamorados', 75.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="card-producto" data-categoria="rosas">
+            <img src="img/amor/ramo_rosas_azules.jpg" alt="Ramo Rosas Azules" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+Rosas+Azules'">
+            <div class="card-body">
+                <h3>Ramo "Amor Infinito" (12 Rosas Azules)</h3>
+                <p>Ramo exclusivo con rosas en tono azul profundo y finas гипсофила.</p>
+                <div class="precio">S/ 85.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 33, 'Ramo Amor Infinito Rosas Azules', 85.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/amor/box_desayuno_romantico.jpg" alt="Desayuno Aniversario" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Desayuno+Amor'">
+            <div class="card-body">
+                <h3>Box Desayuno "Sorpresa de Aniversario"</h3>
+                <p>Jugo natural, waffle corazón, tazas de pareja, sándwich y arreglo floral.</p>
+                <div class="precio">S/ 105.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 34, 'Box Desayuno Sorpresa Aniversario', 105.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="card-producto" data-categoria="personalizados">
+            <img src="img/amor/almohada_fotografía.jpg" alt="Cojín Personalizado Foto" onerror="this.src='https://via.placeholder.com/300x220?text=Cojín+Foto+Pareja'">
+            <div class="card-body">
+                <h3>Cojín Abrazable Personalizado</h3>
+                <p>Cojín de aterciopelado estampado con collage de fotos y fecha de aniversario.</p>
+                <div class="precio">S/ 40.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 35, 'Cojín Abrazable Personalizado', 40.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="card-producto" data-categoria="rosas">
+            <img src="img/amor/ramo_gigante_50_rosas.jpg" alt="Ramo 50 Rosas" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+50+Rosas'">
+            <div class="card-body">
+                <h3>Ramo Bouchon 50 Rosas Rojas</h3>
+                <p>Espectacular ramo gigante de 50 rosas rojas premium con corona dorada.</p>
+                <div class="precio">S/ 250.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 36, 'Ramo Bouchon 50 Rosas', 250.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/amor/stitch_corazon_ramo.jpg" alt="Ramo Stitch Peluche" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+Peluche+Stitch'">
+            <div class="card-body">
+                <h3>Ramo Dulce de Peluche Stitch</h3>
+                <p>Diseño divertido con peluche de Stitch rodeado de bombones y mini rosas.</p>
+                <div class="precio">S/ 78.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 37, 'Ramo Dulce Peluche Stitch', 78.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="card-producto" data-categoria="personalizados">
+            <img src="img/amor/llaveros_proyector_foto.jpg" alt="Llavero Proyector Foto" onerror="this.src='https://via.placeholder.com/300x220?text=Llavero+Proyector'">
+            <div class="card-body">
+                <h3>Dúo Llaveros Rollo de Película Retro</h3>
+                <p>Rollo fotográfico vintage que extrae 10 fotos secretas de la pareja.</p>
+                <div class="precio">S/ 48.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 38, 'Dúo Llaveros Rollo Retro', 48.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/amor/caja_cervezas_amor.jpg" alt="Box Cerveza y Fotos" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Beer+Love'">
+            <div class="card-body">
+                <h3>Box "Love & Beers" Para Él/Ella</h3>
+                <p>Caja rústica con cervezas coronadas, copas personalizadas y piqueos.</p>
+                <div class="precio">S/ 88.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 39, 'Box Love and Beers', 88.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="card-producto" data-categoria="rosas">
+            <img src="img/amor/flor_eterna_encantada.jpg" alt="Flor Eterna Arcoíris" onerror="this.src='https://via.placeholder.com/300x220?text=Rosa+Arcoiris+Eterna'">
+            <div class="card-body">
+                <h3>Rosa Eterna Multinivel Multicolor</h3>
+                <p>Rosa preservada en tonos arcoíris con base de luz cambiante RGB.</p>
+                <div class="precio">S/ 100.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 40, 'Rosa Eterna Multicolor RGB', 100.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Notificación Flotante Toast -->
+<div id="toast" class="toast"></div>
+
+<!--======================
+FOOTER INFO
+========================-->
+<footer>
+
+    <div>
+        <i class="fa-solid fa-box"></i>
+        <h3>Pedidos Personalizados</h3>
+        <p>Creamos el detalle perfecto</p>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Escríbenos por WhatsApp</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hecho con Amor</h3>
+        <p>Cada detalle importa</p>
+    </div>
+
+</footer>
+
+<script src="amor_aniversario.js"></script>
+
+<script src="session-nav.js"></script>
+<script src="img-fallback.js"></script>
+</body>
+</html>

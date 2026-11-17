@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Detallitos JANA</title>
+
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="contactos.css">
+    <!-- ICONOS FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!--======================
+BARRA SUPERIOR
+========================-->
+<div class="top-bar">
+    <i class="fa-solid fa-location-dot"></i>
+    Atención y Envíos a todo San Vicente de Cañete y alrededores
+</div>
+
+<!--======================
+HEADER
+========================-->
+<header>
+
+    <div class="logo">
+        <a href="index.php"><img src="img/detallitolog.png" alt="Logo Detallitos JANA"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+
+            <!-- MENÚ DESPLEGABLE PRODUCTOS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-link">
+                    Productos <i class="fa-solid fa-chevron-down flecha"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="columna">
+                        <a href="graduacion.html">Graduación <span class="badge">Temporada</span></a>
+                        <a href="amor_aniversario.html">Amor y Aniversario</a>
+                        <a href="#">Nacimientos</a>
+                        <a href="#">Recupérate pronto</a>
+                        <a href="para_el.html">Para Él</a>
+                        <a href="ninos.html">Niños</a>
+                    </div>
+                    <div class="columna">
+                        <a href="cumpleanos.html">Cumpleaños</a>
+                        <a href="#">Condolencias</a>
+                        <a href="#">Matrimonio</a>
+                        <a href="#">Agradecimientos</a>
+                        <a href="#">Para Ella</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="pedidos.php">Pedidos Personalizados</a></li>
+            <li><a href="contactos.html" class="active-link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a href="catalogo.php" title="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="login.php" title="Iniciar sesión">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="carrito.php" class="carrito" title="Carrito de compras">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador">0</span>
+        </a>
+    </div>
+
+</header>
+
+<!--======================
+HERO BANNER CONTACTO
+========================-->
+<section class="banner-contacto">
+    <div class="contenido-banner">
+        <span class="etiqueta-banner">📍 ESTAMOS CERCA DE TI</span>
+        <h1>Ponte en Contacto con Nosotros</h1>
+        <p>¿Tienes dudas, pedidos especiales o quieres coordinar una entrega en San Vicente de Cañete? Estamos para atenderte.</p>
+    </div>
+</section>
+
+<!--======================
+CONTENIDO PRINCIPAL CONTACTO
+========================-->
+<section class="seccion-contacto">
+
+    <div class="grid-contacto">
+
+        <!-- TARJETAS DE INFORMACIÓN -->
+        <div class="info-contacto">
+
+            <div class="card-info">
+                <div class="icono-info"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="detalles-info">
+                    <h3>Ubicación Base</h3>
+                    <p>San Vicente de Cañete, Lima - Perú</p>
+                    <span class="subtexto">Envíos locales a Imperial, Quilmaná, Mala y distritos vecinos.</span>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <div class="icono-info"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="detalles-info">
+                    <h3>WhatsApp Directo</h3>
+                    <p>+51 987 654 321</p>
+                    <a href="https://wa.me/51987654321?text=Hola%20Detallitos%20JANA,%20deseo%20consultar%20por%20un%20pedido" target="_blank" class="btn-whatsapp-directo">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje
+                    </a>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <div class="icono-info"><i class="fa-solid fa-clock"></i></div>
+                <div class="detalles-info">
+                    <h3>Horario de Atención</h3>
+                    <p>Lunes a Sábado: 8:00 am - 8:00 pm</p>
+                    <p>Domingos: 9:00 am - 2:00 pm</p>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <div class="icono-info"><i class="fa-solid fa-envelope"></i></div>
+                <div class="detalles-info">
+                    <h3>Correo Electrónico</h3>
+                    <p>contacto@detallitosjana.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="form-contenedor">
+            <h2>Escríbenos un Mensaje</h2>
+            <p>Completa los datos y te responderemos a la brevedad posible.</p>
+
+            <form id="formContacto" action="procesar_contacto.php" method="POST">
+
+                <div class="campo-grupo">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="campo-doble">
+                    <div class="campo-grupo">
+                        <label for="telefono">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 912345678" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="distrito">Distrito de Entrega *</label>
+                        <select id="distrito" name="distrito" required>
+                            <option value="" disabled selected>Selecciona tu distrito</option>
+                            <option value="San Vicente">San Vicente de Cañete</option>
+                            <option value="Imperial">Imperial</option>
+                            <option value="Nuevo Imperial">Nuevo Imperial</option>
+                            <option value="Quilmaná">Quilmaná</option>
+                            <option value="Lunahuaná">Lunahuaná</option>
+                            <option value="Mala">Mala</option>
+                            <option value="Otro">Otro distrito de Cañete</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Ej. Consulta de entrega / Pedido personalizado">
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensaje">Mensaje o Detalle de la Consulta *</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué detalle necesitas o la fecha estimada para tu entrega..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar-contacto">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Consulta
+                </button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- MAPA DE UBICACIÓN SAN VICENTE DE CAÑETE -->
+    <div class="mapa-contenedor">
+        <h2>Cobertura en San Vicente de Cañete</h2>
+        <div class="iframe-mapa">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15560.852445671603!2d-76.3920!3d-13.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910a221f7e025113%3A0x2863a34a9ed517b6!2sSan%20Vicente%20de%20Ca%C3%B1ete!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe" 
+                width="100%" 
+                height="350" 
+                style="border:0; border-radius: 15px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+</section>
+
+<!-- Notificación Flotante Toast -->
+<div id="toast" class="toast"></div>
+
+<!--======================
+FOOTER INFO
+========================-->
+<footer>
+
+    <div>
+        <i class="fa-solid fa-box"></i>
+        <h3>Pedidos Personalizados</h3>
+        <p>Creamos el detalle perfecto</p>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Escríbenos por WhatsApp</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hecho con Amor</h3>
+        <p>Cada detalle importa</p>
+    </div>
+
+</footer>
+
+<!-- Vinculación del JavaScript -->
+<script src="contactos.js"></script>
+
+<script src="session-nav.js"></script>
+<script src="img-fallback.js"></script>
+</body>
+</html>

@@ -1,0 +1,779 @@
+/* ==========================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #333333;
+}
+
+/* ==========================================
+   2. BARRA SUPERIOR
+   ========================================== */
+.top-bar {
+    background-color: #d8b4fe; /* Tono lila pastel */
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+/* ==========================================
+   3. HEADER / CABECERA
+   ========================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 100;
+}
+
+/* Regulación del tamaño del Logo */
+.logo img {
+    height: 50px; /* Tamaño controlado para no descuadrar el menú */
+    width: auto;
+    display: block;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a855f7;
+}
+
+/* ==========================================
+   4. MENÚ DESPLEGABLE (PRODUCTOS)
+   ========================================== */
+nav ul li.dropdown {
+    position: relative;
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-link .flecha {
+    font-size: 11px;
+    transition: transform 0.3s ease;
+}
+
+/* Gira la flechita al pasar el mouse */
+.dropdown:hover .flecha {
+    transform: rotate(180deg);
+}
+
+/* Caja Flotante del Submenú */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: 450px; /* Espacio para las 2 columnas */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    
+    /* Efecto de aparición suave */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Mostrar menú en hover */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Columnas del Submenú */
+.dropdown-menu .columna {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.dropdown-menu a {
+    color: #4a5568;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f3e8ff; /* Fondo lila suave al pasar el mouse */
+    color: #9333ea;
+}
+
+/* Etiqueta Verde "Temporada" */
+.dropdown-menu .badge {
+    background-color: #e6f4ea;
+    color: #1e8e3e;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   5. ICONOS DE ACCIÓN (BUSCADOR, USER, CARRITO)
+   ========================================== */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a {
+    color: #4a4a4a;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #a855f7;
+}
+
+/* Contador del Carrito */
+.carrito .contador {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #c084fc;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================
+   6. SECCIÓN HERO
+   ========================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    background-color: #faf5ff;
+}
+
+.hero .contenido {
+    max-width: 50%;
+}
+
+.hero .etiqueta {
+    display: inline-block;
+    background-color: #f3e8ff;
+    color: #9333ea;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #3b0764;
+    line-height: 1.1;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #7e22ce;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.hero .botones {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    background-color: #a855f7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #9333ea;
+}
+
+.btn2 {
+    border: 2px solid #a855f7;
+    color: #a855f7;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn2:hover {
+    background-color: #a855f7;
+    color: white;
+}
+
+.hero .imagen img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* ==========================================
+   7. SECCIÓN CARACTERÍSTICAS
+   ========================================== */
+.caracteristicas {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.caracteristicas div i {
+    font-size: 28px;
+    color: #a855f7;
+    margin-bottom: 10px;
+}
+
+.caracteristicas h4 {
+    font-size: 16px;
+    color: #333;
+}
+
+.caracteristicas p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* ==========================================
+   8. FOOTER
+   ========================================== */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 5%;
+    background-color: #faf5ff;
+    border-top: 1px solid #f3e8ff;
+    text-align: center;
+}
+
+footer div i {
+    font-size: 22px;
+    color: #a855f7;
+    margin-bottom: 8px;
+}
+
+footer h3 {
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+footer p {
+    font-size: 13px;
+    color: #777;
+}
+/* ==========================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-principal: #a855f7;
+    --color-principal-hover: #9333ea;
+    --color-oscuro: #3b0764;
+    --color-texto: #4b5563;
+    --color-fondo-suave: #f8f5ff;
+    --color-blanco: #ffffff;
+    --sombra-suave: 0 10px 25px rgba(168, 85, 247, 0.08);
+    --sombra-hover: 0 15px 30px rgba(168, 85, 247, 0.15);
+}
+
+body {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================
+   2. BARRA SUPERIOR
+   ========================================== */
+.top-bar {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.top-bar i {
+    color: var(--color-principal);
+    margin-right: 5px;
+}
+
+/* ==========================================
+   3. HEADER Y NAVEGACIÓN
+   ========================================== */
+header {
+    background-color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4b5563;
+    padding: 8px 0;
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--color-principal);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-principal);
+    border-radius: 2px;
+}
+
+/* Menú Desplegable Productos */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-blanco);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    gap: 30px;
+    z-index: 100;
+    min-width: 380px;
+    border: 1px solid #f3e8ff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu .columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.dropdown-menu a {
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    background-color: #f3e8ff;
+    color: var(--color-principal);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+/* Iconos de Cabecera */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a {
+    font-size: 18px;
+    color: var(--color-oscuro);
+    position: relative;
+}
+
+.icons a:hover {
+    color: var(--color-principal);
+}
+
+.carrito .contador {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--color-principal);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   4. SECCIÓN NOSOTROS (PÁGINA COMPLETA)
+   ========================================== */
+.nosotros {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.nosotros-contenedor {
+    background-color: var(--color-blanco);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid #f3e8ff;
+}
+
+/* Imagen Lateral */
+.nosotros-imagen {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.nosotros-imagen img {
+    width: 100%;
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.badge-exp {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.badge-exp span {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-principal);
+    display: block;
+    line-height: 1;
+}
+
+.badge-exp p {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    margin: 0;
+}
+
+/* Texto de la Sección */
+.nosotros-contenido {
+    flex: 1.2;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #f3e8ff;
+    color: var(--color-principal);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.nosotros-contenido h2 {
+    color: var(--color-oscuro);
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.nosotros-contenido p {
+    color: var(--color-texto);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Bloques de Valores */
+.nosotros-valores {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.item-valor {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.item-valor i {
+    background-color: #f3e8ff;
+    color: var(--color-principal);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.item-valor h4 {
+    color: var(--color-oscuro);
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.item-valor p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Botón WhatsApp */
+.btn-nosotros {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366;
+    color: var(--color-blanco);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-nosotros:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   5. CARACTERÍSTICAS DE CONFIANZA
+   ========================================== */
+.caracteristicas {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.caracteristicas > div {
+    background-color: var(--color-blanco);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #f3e8ff;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease;
+}
+
+.caracteristicas > div:hover {
+    transform: translateY(-5px);
+}
+
+.caracteristicas i {
+    font-size: 28px;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.caracteristicas h4 {
+    color: var(--color-oscuro);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.caracteristicas p {
+    font-size: 13px;
+    color: #888;
+}
+
+/* ==========================================
+   6. FOOTER
+   ========================================== */
+footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+footer i {
+    font-size: 24px;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #d8b4fe;
+}
+
+/* ==========================================
+   7. ADAPTABILIDAD RESPONSIVA (MÓVILES)
+   ========================================== */
+@media (max-width: 900px) {
+    .nosotros-contenedor {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .nosotros-contenido h2 {
+        font-size: 24px;
+    }
+
+    .caracteristicas {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}

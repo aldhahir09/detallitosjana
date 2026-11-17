@@ -1,0 +1,476 @@
+/* ==========================================
+   RESET & VARIABLES GLOBALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #ff6b81;
+    --primary-hover: #ff4757;
+    --secondary-color: #2ed573;
+    --text-color: #2f3542;
+    --text-muted: #747d8c;
+    --bg-light: #f1f2f6;
+    --white: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================
+   BARRA SUPERIOR
+   ========================================== */
+.top-bar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+/* ==========================================
+   HEADER & NAVEGACIÓN
+   ========================================== */
+header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 55px;
+    object-fit: contain;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    font-weight: 600;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+nav a:hover, nav a.active-link {
+    color: var(--primary-color);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background-color: var(--white);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    min-width: 380px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu .columna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.dropdown-menu a {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.badge {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* Iconos de Header */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons a {
+    font-size: 1.2rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.icons a:hover {
+    color: var(--primary-color);
+}
+
+.carrito .contador {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* ==========================================
+   HERO BANNER CONTACTO
+   ========================================== */
+.banner-contacto {
+    background: linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.contenido-banner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.etiqueta-banner {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.banner-contacto h1 {
+    font-size: 2.5rem;
+    margin: 15px 0 10px;
+}
+
+.banner-contacto p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   SECCIÓN CONTACTO
+   ========================================== */
+.seccion-contacto {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.grid-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Tarjetas de Información */
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-info {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: var(--transition);
+}
+
+.card-info:hover {
+    transform: translateY(-3px);
+}
+
+.icono-info {
+    background-color: #ffeaa7;
+    color: #d63031;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.detalles-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.detalles-info p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.subtexto {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 4px;
+}
+
+.btn-whatsapp-directo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn-whatsapp-directo:hover {
+    background-color: #26af5f;
+}
+
+/* Formulario de Contacto */
+.form-contenedor {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.form-contenedor h2 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.form-contenedor p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.campo-grupo label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 107, 129, 0.3);
+}
+
+.campo-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn-enviar-contacto {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.btn-enviar-contacto:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Mapa de Ubicación */
+.mapa-contenedor {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.mapa-contenedor h2 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* ==========================================
+   TOAST (Notificación Flotante)
+   ========================================== */
+.toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #2ed573;
+    color: var(--white);
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 2000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    margin-top: 60px;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+footer div i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   RESPONSIVO (MOBILE)
+   ========================================== */
+@media (max-width: 850px) {
+    .grid-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-doble {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav > ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner-contacto h1 {
+        font-size: 1.8rem;
+    }
+
+    .toast {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+}

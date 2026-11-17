@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles para Niños - Detallitos JANA</title>
+
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="ninos.css">
+    <!-- ICONOS FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!--======================
+BARRA SUPERIOR
+========================-->
+<div class="top-bar">
+    <i class="fa-solid fa-heart"></i>
+    Envíos a todo el país
+</div>
+
+<!--======================
+HEADER
+========================-->
+<header>
+
+    <div class="logo">
+        <a href="index.php"><img src="img/detallitolog.png" alt="Logo Detallitos JANA"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+
+            <!-- MENÚ DESPLEGABLE PRODUCTOS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-link">
+                    Productos <i class="fa-solid fa-chevron-down flecha"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="columna">
+                        <a href="graduacion.html">Graduación <span class="badge">Temporada</span></a>
+                        <a href="amor_aniversario.html">Amor y Aniversario</a>
+                        <a href="para_el.html">Para Él</a>
+                        <a href="ninos.html" class="active-link">Niños</a>
+                    </div>
+                    <div class="columna">
+                        <a href="cumpleanos.html">Cumpleaños</a>
+                        <a href="#">Condolencias</a>
+                        <a href="#">Matrimonio</a>
+                        <a href="#">Agradecimientos</a>
+                        <a href="#">Para Ella</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="pedidos.php">Pedidos Personalizados</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a href="catalogo.php" title="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="login.php" title="Iniciar sesión">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="carrito.php" class="carrito" title="Carrito de compras">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador">0</span>
+        </a>
+    </div>
+
+</header>
+
+<!--======================
+HERO BANNER NIÑOS
+========================-->
+<section class="banner-ninos">
+    <div class="contenido-banner">
+        <span class="etiqueta-banner">🎈 DIVERSIÓN Y MAGIA</span>
+        <h1>Detalles Mágicos Para Niños</h1>
+        <p>Sorpresas llenas de color, juguetes, golosinas y personajes favoritos para dibujar sonrisas inolvidables.</p>
+    </div>
+</section>
+
+<!--======================
+CATÁLOGO Y FILTROS
+========================-->
+<section class="seccion-ninos">
+    
+    <!-- Filtros por Subcategoría -->
+    <nav class="subfiltros">
+        <button class="btn-filtro active" data-categoria="todos">Todos (20)</button>
+        <button class="btn-filtro" data-categoria="cajas">Cajas Sorpresa</button>
+        <button class="btn-filtro" data-categoria="peluches">Peluches & Personajes</button>
+        <button class="btn-filtro" data-categoria="dulces">Golosinas & Snacks</button>
+        <button class="btn-filtro" data-categoria="creativos">Kits Creativos</button>
+    </nav>
+
+    <!-- Grid con 20 Productos -->
+    <div class="contenedor-productos">
+
+        <!-- 1 -->
+        <div class="card-producto" data-categoria="cajas">
+            <span class="tag">Favorito</span>
+            <img src="img/ninos/box_superheroes.jpg" alt="Box Sorpresa Superhéroes" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Superhéroes'">
+            <div class="card-body">
+                <h3>Box Sorpresa "Power Superhéroes"</h3>
+                <p>Caja temática con figura articulada, snacks variados, burbujero y jugo de frutas.</p>
+                <div class="precio">S/ 75.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 61, 'Box Sorpresa Power Superhéroes', 75.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card-producto" data-categoria="cajas">
+            <span class="tag">Top Ventas</span>
+            <img src="img/ninos/box_princesa_unicornio.jpg" alt="Box Unicornio Mágico" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Unicornio+Mágico'">
+            <div class="card-body">
+                <h3>Box Mágico "Unicornio & Estrellas"</h3>
+                <p>Caja rosada con diadema de unicornio, peluche suave, luces LED y chocolates finos.</p>
+                <div class="precio">S/ 80.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 62, 'Box Mágico Unicornio', 80.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/ninos/peluche_dinosaurio_gigante.jpg" alt="Peluche Dinosaurio Dino" onerror="this.src='https://via.placeholder.com/300x220?text=Peluche+Dinosaurio+Dino'">
+            <div class="card-body">
+                <h3>Dino-Peluche Gigante Suave 50cm</h3>
+                <p>Amigable dinosaurio de felpa hipoalergénica con globo metalizado "Feliz Día".</p>
+                <div class="precio">S/ 68.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 63, 'Dino Peluche Gigante 50cm', 68.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card-producto" data-categoria="creativos">
+            <img src="img/ninos/kit_arte_pintura.jpg" alt="Kit Arte y Pintura" onerror="this.src='https://via.placeholder.com/300x220?text=Kit+Arte+Pintura'">
+            <div class="card-body">
+                <h3>Kit de Arte "Pequeño Artista" 150 Piezas</h3>
+                <p>Maletín completo con acuarelas, plumones, crayones, libro para colorear y lienzo.</p>
+                <div class="precio">S/ 65.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 64, 'Kit de Arte Pequeño Artista', 65.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/ninos/balde_golosinas_globos.jpg" alt="Balde Dulcero Divertido" onerror="this.src='https://via.placeholder.com/300x220?text=Balde+Dulcero+Divertido'">
+            <div class="card-body">
+                <h3>Candy Bucket "Mega Fiesta Dulce"</h3>
+                <p>Balde colorido cargado con gomitas, chupetes, galletas, chocolates y mini peluche.</p>
+                <div class="precio">S/ 55.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 65, 'Candy Bucket Mega Fiesta', 55.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/ninos/ramo_peluches_stitch.jpg" alt="Ramo de Peluches Mini Stitch" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+Peluches+Stitch'">
+            <div class="card-body">
+                <h3>Ramo Divertido "Stitch & Dulces"</h3>
+                <p>Arreglo tipo ramo con peluche de Stitch, chocolates sublimes y globos de colores.</p>
+                <div class="precio">S/ 72.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 66, 'Ramo Divertido Stitch', 72.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/ninos/box_desayuno_infantil.jpg" alt="Desayuno Sorpresa Infantil" onerror="this.src='https://via.placeholder.com/300x220?text=Desayuno+Sorpresa+Infantil'">
+            <div class="card-body">
+                <h3>Box Desayuno "Mañana Mágica"</h3>
+                <p>Pancakes con chispas de chocolate, Milo en cajita, fruta picada y vaso entrenador.</p>
+                <div class="precio">S/ 70.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 67, 'Box Desayuno Mañana Mágica', 70.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card-producto" data-categoria="creativos">
+            <img src="img/ninos/caja_slime_creativo.jpg" alt="Kit Slime Mágico" onerror="this.src='https://via.placeholder.com/300x220?text=Kit+Slime+Mágico'">
+            <div class="card-body">
+                <h3>Lab de Slime & Manualidades DIY</h3>
+                <p>Set interactivo para crear slimes brillantes con escarchas, aromas y moldes.</p>
+                <div class="precio">S/ 48.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 68, 'Lab de Slime Manualidades DIY', 48.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/ninos/ramo_golosinas_gigante.jpg" alt="Ramo Gigante de Dulces" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+Gigante+Dulces'">
+            <div class="card-body">
+                <h3>Ramo Surprise "Super Candy Explosion"</h3>
+                <p>Ramo gigante repleto de Marshmallows, Skittles, Oreo, M&M's y Chupetones.</p>
+                <div class="precio">S/ 62.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 69, 'Ramo Super Candy Explosion', 62.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/ninos/almohada_proyector_estrellas.jpg" alt="Peluche Proyector Estrellas" onerror="this.src='https://via.placeholder.com/300x220?text=Peluche+Proyector'">
+            <div class="card-body">
+                <h3>Peluche Luz Quitamiedos & Proyector LED</h3>
+                <p>Proyecta estrellas de colores en el techo con música relajante para dormir.</p>
+                <div class="precio">S/ 85.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 70, 'Peluche Proyector LED Estrellas', 85.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/ninos/box_gamer_kid.jpg" alt="Box Gamer Junior" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Gamer+Junior'">
+            <div class="card-body">
+                <h3>Box "Gamer Junior Level Up"</h3>
+                <p>Caja temática de consola con audífonos infantiles, Pringles y bebida energizante de frutas.</p>
+                <div class="precio">S/ 78.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 71, 'Box Gamer Junior Level Up', 78.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="card-producto" data-categoria="creativos">
+            <img src="img/ninos/termo_sticker_personalizable.jpg" alt="Tomatodo para Decorar" onerror="this.src='https://via.placeholder.com/300x220?text=Tomatodo+DIY+Stickers'">
+            <div class="card-body">
+                <h3>Tomatodo DIY con Stickers & Gemas 3D</h3>
+                <p>Botella térmica escolar libre de BPA con planchas de gemas brillantes para personalizar.</p>
+                <div class="precio">S/ 42.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 72, 'Tomatodo DIY Stickers y Gemas', 42.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/ninos/combo_paw_patrol.jpg" alt="Combo Paw Patrol" onerror="this.src='https://via.placeholder.com/300x220?text=Combo+Paw+Patrol'">
+            <div class="card-body">
+                <h3>Set "Patrulla al Rescate"</h3>
+                <p>Peluche original de Paw Patrol, vaso térmico con sorbete y galletas temáticas.</p>
+                <div class="precio">S/ 68.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 73, 'Set Patrulla al Rescate Paw Patrol', 68.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/ninos/caja_explosiva_dulces_juguete.jpg" alt="Caja Explosiva Infantil" onerror="this.src='https://via.placeholder.com/300x220?text=Caja+Explosiva+Niños'">
+            <div class="card-body">
+                <h3>Caja Explosiva "¡Sorpresa Cumpleañera!"</h3>
+                <p>Caja desplegable con fotos, mensajes de feliz cumpleaños y un minijuego central.</p>
+                <div class="precio">S/ 65.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 74, 'Caja Explosiva Sorpresa Cumple', 65.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="card-producto" data-categoria="creativos">
+            <img src="img/ninos/caja_bloques_construcción.jpg" alt="Box Bloques de Construcción" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Bloques+Lego'">
+            <div class="card-body">
+                <h3>Set "Master Builder" Bloques Creativos</h3>
+                <p>Caja de almacenamiento con 250 bloques estilo Lego, base de armar y snack dulce.</p>
+                <div class="precio">S/ 58.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 75, 'Set Master Builder Bloques', 58.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/ninos/peluche_reversible_pulpo.jpg" alt="Combo Pulpo Reversible" onerror="this.src='https://via.placeholder.com/300x220?text=Combo+Pulpo+Reversible'">
+            <div class="card-body">
+                <h3>Pack "Pulpo Emociones & Chocolates"</h3>
+                <p>Peluche de pulpo reversible de emociones acompañado de caja de bombones infantiles.</p>
+                <div class="precio">S/ 38.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 76, 'Pack Pulpo Emociones Chocolates', 38.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/ninos/box_pijama_party.jpg" alt="Box Noche de Pijamada" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Pijamada'">
+            <div class="card-body">
+                <h3>Box "Pijamada Divertida"</h3>
+                <p>Antifaz para dormir bordado, pantuflas de peluche, almohadita y caja de canchita.</p>
+                <div class="precio">S/ 74.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 77, 'Box Pijamada Divertida', 74.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="card-producto" data-categoria="creativos">
+            <img src="img/ninos/camisa_coloreable_magic.jpg" alt="Polo para Colorear y Lavar" onerror="this.src='https://via.placeholder.com/300x220?text=Polo+Para+Colorear'">
+            <div class="card-body">
+                <h3>Polo Coloreable + Set de Plumones Lavables</h3>
+                <p>Polo 100% algodón con diseño estampado para pintar, lavar y volver a colorear.</p>
+                <div class="precio">S/ 45.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 78, 'Polo Coloreable Plumones Lavables', 45.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/ninos/bouquet_globos_numeros_dulces.jpg" alt="Bouquet Cumpleaños Niños" onerror="this.src='https://via.placeholder.com/300x220?text=Bouquet+Cumple+Niños'">
+            <div class="card-body">
+                <h3>Bouquet Giant "¡Feliz Cumple Peque!"</h3>
+                <p>Arreglo de globos con número metalizado gigante y base repleta de chocolates.</p>
+                <div class="precio">S/ 60.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 79, 'Bouquet Giant Feliz Cumple Peque', 60.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="card-producto" data-categoria="peluches">
+            <img src="img/ninos/mochila_peluche_infantil.jpg" alt="Mochila Peluche Tierna" onerror="this.src='https://via.placeholder.com/300x220?text=Mochila+Peluche+Tierna'">
+            <div class="card-body">
+                <h3>Mochila-Peluche Infantil + Accesorios</h3>
+                <p>Mochilita suave de animalito rellena de accesorios para el cabello o minijuguetes.</p>
+                <div class="precio">S/ 52.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 80, 'Mochila Peluche Infantil Accesorios', 52.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Notificación Flotante Toast -->
+<div id="toast" class="toast"></div>
+
+<!--======================
+FOOTER INFO
+========================-->
+<footer>
+
+    <div>
+        <i class="fa-solid fa-box"></i>
+        <h3>Pedidos Personalizados</h3>
+        <p>Creamos el detalle perfecto</p>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Escríbenos por WhatsApp</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hecho con Amor</h3>
+        <p>Cada detalle importa</p>
+    </div>
+
+</footer>
+
+<!-- Vinculación del JavaScript (Usar ninos.js sin la Ñ) -->
+<script src="ninos.js"></script>
+
+<script src="session-nav.js"></script>
+<script src="img-fallback.js"></script>
+</body>
+</html>

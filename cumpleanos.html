@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Cumpleaños - Detallitos JANA</title>
+
+    <!-- Vinculación del CSS -->
+    <link rel="stylesheet" href="cumpleanos.css">
+    <!-- ICONOS FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!--======================
+BARRA SUPERIOR
+========================-->
+<div class="top-bar">
+    <i class="fa-solid fa-gift"></i>
+    Envíos a todo el país — ¡Celebra en grande!
+</div>
+
+<!--======================
+HEADER
+========================-->
+<header>
+
+    <div class="logo">
+        <a href="index.php"><img src="img/detallitolog.png" alt="Logo Detallitos JANA"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+
+            <!-- MENÚ DESPLEGABLE PRODUCTOS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-link">
+                    Productos <i class="fa-solid fa-chevron-down flecha"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="columna">
+                        <a href="graduacion.html">Graduación <span class="badge">Temporada</span></a>
+                        <a href="amor_aniversario.html">Amor y Aniversario</a>
+                        <a href="#">Nacimientos</a>
+                        <a href="#">Recupérate pronto</a>
+                        <a href="para_el.html">Para Él</a>
+                        <a href="ninos.html">Niños</a>
+                    </div>
+                    <div class="columna">
+                        <a href="cumpleanos.html" class="active-link">Cumpleaños</a>
+                        <a href="#">Condolencias</a>
+                        <a href="#">Matrimonio</a>
+                        <a href="#">Agradecimientos</a>
+                        <a href="#">Para Ella</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="pedidos.php">Pedidos Personalizados</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a href="catalogo.php" title="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="login.php" title="Iniciar sesión">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="carrito.php" class="carrito" title="Carrito de compras">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador">0</span>
+        </a>
+    </div>
+
+</header>
+
+<!--======================
+HERO BANNER CUMPLEAÑOS
+========================-->
+<section class="banner-cumpleanos">
+    <div class="contenido-banner">
+        <span class="etiqueta-banner">🎂 ¡FELIZ CUMPLEAÑOS!</span>
+        <h1>Sorpresas Mágicas de Cumpleaños</h1>
+        <p>Encuentra el regalo perfecto para hacer de su día una experiencia inolvidable llena de sabor, globos y alegría.</p>
+    </div>
+</section>
+
+<!--======================
+CATÁLOGO Y FILTROS
+========================-->
+<section class="seccion-cumpleanos">
+    
+    <!-- Filtros por Subcategoría -->
+    <nav class="subfiltros">
+        <button class="btn-filtro active" data-categoria="todos">Todos (12)</button>
+        <button class="btn-filtro" data-categoria="cajas">Cajas & Desayunos</button>
+        <button class="btn-filtro" data-categoria="globos">Arreglos & Globos</button>
+        <button class="btn-filtro" data-categoria="tortas">Mini Tortas & Dulces</button>
+        <button class="btn-filtro" data-categoria="licores">Packs & Brindis</button>
+    </nav>
+
+    <!-- Grid de Productos -->
+    <div class="contenedor-productos">
+
+        <!-- 1 -->
+        <div class="card-producto" data-categoria="cajas">
+            <span class="tag">Top Ventas</span>
+            <img src="img/cumpleanos/box_cumple_premium.jpg" alt="Box Cumpleaños Premium" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Cumple+Premium'">
+            <div class="card-body">
+                <h3>Box Cumpleaños "Celebración Gold"</h3>
+                <p>Caja elegante con mini torta personal, globo metalizado, chocolates Ferrero y aperitivo.</p>
+                <div class="precio">S/ 85.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 101, 'Box Cumpleaños Celebración Gold', 85.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card-producto" data-categoria="globos">
+            <span class="tag">Favorito</span>
+            <img src="img/cumpleanos/bouquet_globos_numeros.jpg" alt="Bouquet de Globos Gigante" onerror="this.src='https://via.placeholder.com/300x220?text=Bouquet+Globos+Gigante'">
+            <div class="card-body">
+                <h3>Maxi Bouquet "Numbers & Party"</h3>
+                <p>Arreglo de globos personalizado con número gigante, helio y chocolates finos en la base.</p>
+                <div class="precio">S/ 70.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 102, 'Maxi Bouquet Numbers & Party', 70.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/cumpleanos/desayuno_cumpleanos.jpg" alt="Desayuno Sorpresa Cumpleaños" onerror="this.src='https://via.placeholder.com/300x220?text=Desayuno+Cumpleaños'">
+            <div class="card-body">
+                <h3>Desayuno "¡Despierta es tu Día!"</h3>
+                <p>Cesta con sandwich gourmet, jugo natural, cupcake con vela, fruta y taza personalizada.</p>
+                <div class="precio">S/ 90.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 103, 'Desayuno Despierta es tu Dia', 90.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card-producto" data-categoria="tortas">
+            <img src="img/cumpleanos/bento_cake_sorpresa.jpg" alt="Bento Cake Cumpleaños" onerror="this.src='https://via.placeholder.com/300x220?text=Bento+Cake+Sorpresa'">
+            <div class="card-body">
+                <h3>Bento Cake + Pack Dulce</h3>
+                <p>Mini torta personalizada con frase divertida, alfajores gourmet y vela chispeante.</p>
+                <div class="precio">S/ 55.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 104, 'Bento Cake Pack Dulce', 55.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card-producto" data-categoria="licores">
+            <img src="img/cumpleanos/pack_brindis_cumple.jpg" alt="Pack Brindis Cumpleaños" onerror="this.src='https://via.placeholder.com/300x220?text=Pack+Brindis+Cumple'">
+            <div class="card-body">
+                <h3>Box Brindis "Cheers to You"</h3>
+                <p>Botella de pisco o espumante, copas grabadas, piqueos selectos y empaque de lujo.</p>
+                <div class="precio">S/ 95.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 105, 'Box Brindis Cheers to You', 95.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card-producto" data-categoria="globos">
+            <img src="img/cumpleanos/burbuja_led_cumple.jpg" alt="Globo Burbuja LED" onerror="this.src='https://via.placeholder.com/300x220?text=Globo+Burbuja+LED'">
+            <div class="card-body">
+                <h3>Globo Burbuja Personalizado + Luces LED</h3>
+                <p>Globo gigante transparente relleno de plumas/mini globos con vinilo de "Feliz Cumpleaños".</p>
+                <div class="precio">S/ 65.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 106, 'Globo Burbuja Personalizado LED', 65.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card-producto" data-categoria="tortas">
+            <img src="img/cumpleanos/caja_cupcakes_cumple.jpg" alt="Caja de Cupcakes Temáticos" onerror="this.src='https://via.placeholder.com/300x220?text=Cupcakes+Cumpleaños'">
+            <div class="card-body">
+                <h3>Caja x6 Cupcakes "Party Mood"</h3>
+                <p>Cupcakes decorados en masa elástica con diseño de cumpleaños, fotos o mensajes.</p>
+                <div class="precio">S/ 48.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 107, 'Caja x6 Cupcakes Party Mood', 48.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/cumpleanos/box_chocolates_globos.jpg" alt="Box Dulce Cumpleaños" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Chocolates+Globos'">
+            <div class="card-body">
+                <h3>Sweet Box "Explosión de Sabor"</h3>
+                <p>Caja sorpresa repleta de golosinas importadas, chocolates y globo metalizado.</p>
+                <div class="precio">S/ 60.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 108, 'Sweet Box Explosion de Sabor', 60.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card-producto" data-categoria="licores">
+            <img src="img/cumpleanos/pack_cervecero_cumple.jpg" alt="Pack Cervecero Cumpleaños" onerror="this.src='https://via.placeholder.com/300x220?text=Pack+Cervecero'">
+            <div class="card-body">
+                <h3>Bucket Cervecero "Cumple Feliz"</h3>
+                <p>Balde cervecero de metal con 4 cervezas artesanales, frutos secos y destapador de madera.</p>
+                <div class="precio">S/ 78.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 109, 'Bucket Cervecero Cumple Feliz', 78.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card-producto" data-categoria="globos">
+            <img src="img/cumpleanos/ramo_rosas_cumple.jpg" alt="Arreglo Floral Cumpleaños" onerror="this.src='https://via.placeholder.com/300x220?text=Rosas+Cumpleaños'">
+            <div class="card-body">
+                <h3>Ramo "Cumpleaños Radiante" + Globo</h3>
+                <p>Arreglo de 12 rosas frescas de color vibrante, topper de madera y globo festivo.</p>
+                <div class="precio">S/ 75.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 110, 'Ramo Cumpleaños Radiante', 75.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/cumpleanos/caja_sorpresa_globos.jpg" alt="Caja Sorpresa Revelación" onerror="this.src='https://via.placeholder.com/300x220?text=Caja+Sorpresa+Globos'">
+            <div class="card-body">
+                <h3>Caja Sorpresa "Balloon Pop"</h3>
+                <p>Caja gigante que al abrirse suelta globos de helio junto a un regalo en el fondo.</p>
+                <div class="precio">S/ 110.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 111, 'Caja Sorpresa Balloon Pop', 110.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="card-producto" data-categoria="tortas">
+            <img src="img/cumpleanos/combo_torta_globos.jpg" alt="Combo Cumpleañero Completo" onerror="this.src='https://via.placeholder.com/300x220?text=Combo+Torta+Globos'">
+            <div class="card-body">
+                <h3>Combo "Fiesta Completa"</h3>
+                <p>Torta mediana (8 porciones), bouquet de globos y tarjeta gigante con mensaje.</p>
+                <div class="precio">S/ 125.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 112, 'Combo Fiesta Completa', 125.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Notificación Flotante Toast -->
+<div id="toast" class="toast"></div>
+
+<!--======================
+FOOTER INFO
+========================-->
+<footer>
+
+    <div>
+        <i class="fa-solid fa-box"></i>
+        <h3>Pedidos Personalizados</h3>
+        <p>Creamos el detalle perfecto</p>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Escríbenos por WhatsApp</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hecho con Amor</h3>
+        <p>Cada detalle importa</p>
+    </div>
+
+</footer>
+
+<!-- Vinculación del JavaScript -->
+<script src="cumpleanos.js"></script>
+
+<script src="session-nav.js"></script>
+<script src="img-fallback.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Para Él - Detallitos JANA</title>
+
+    <link rel="stylesheet" href="para_el.css">
+    <!-- ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!--======================
+BARRA SUPERIOR
+========================-->
+<div class="top-bar">
+    <i class="fa-solid fa-heart"></i>
+    Envíos a todo el país
+</div>
+
+<!--======================
+HEADER
+========================-->
+<header>
+
+    <div class="logo">
+        <a href="index.php"><img src="img/detallitolog.png" alt="Logo Detallitos JANA"></a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.php">Inicio</a></li>
+
+            <!-- MENÚ DESPLEGABLE PRODUCTOS -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-link">
+                    Productos <i class="fa-solid fa-chevron-down flecha"></i>
+                </a>
+
+                <div class="dropdown-menu">
+                    <div class="columna">
+                        <a href="graduacion.html">Graduación <span class="badge">Temporada</span></a>
+                        <a href="amor_aniversario.html">Amor y Aniversario</a>
+                        <a href="para_el.html" class="active-link">Para Él</a>
+                        <a href="#">Niños</a>
+                    </div>
+                    <div class="columna">
+                        <a href="contactos.html">Cumpleaños</a>
+                        <a href="#">Condolencias</a>
+                        <a href="#">Matrimonio</a>
+                        <a href="#">Agradecimientos</a>
+                        <a href="#">Para Ella</a>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="pedidos.php">Pedidos Personalizados</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="icons">
+        <a href="catalogo.php" title="Buscar productos">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <a href="login.php" title="Iniciar sesión">
+            <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="carrito.php" class="carrito" title="Carrito de compras">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador">0</span>
+        </a>
+    </div>
+
+</header>
+
+<!--======================
+HERO BANNER PARA ÉL
+========================-->
+<section class="banner-para-el">
+    <div class="contenido-banner">
+        <span class="etiqueta-banner">👔 COLECCIÓN MASCULINA</span>
+        <h1>Detalles Especiales Para Él</h1>
+        <p>Regalos únicos, elegantes y personalizados para sorprender al hombre especial de tu vida.</p>
+    </div>
+</section>
+
+<!--======================
+CATÁLOGO Y FILTROS
+========================-->
+<section class="seccion-para-el">
+    
+    <!-- Filtros por Subcategoría -->
+    <nav class="subfiltros">
+        <button class="btn-filtro active" data-categoria="todos">Todos (20)</button>
+        <button class="btn-filtro" data-categoria="licores">Licores & Cervezas</button>
+        <button class="btn-filtro" data-categoria="cajas">Box Caballero</button>
+        <button class="btn-filtro" data-categoria="accesorios">Accesorios & Piel</button>
+        <button class="btn-filtro" data-categoria="dulces">Chocolates & Snacks</button>
+    </nav>
+
+    <!-- Grid con 20 Productos -->
+    <div class="contenedor-productos">
+
+        <!-- 1 -->
+        <div class="card-producto" data-categoria="licores">
+            <span class="tag">Top Ventas</span>
+            <img src="img/para_el/whisky_jack_box.jpg" alt="Box Whisky Jack Daniels" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Whisky+Jack'">
+            <div class="card-body">
+                <h3>Box Premium Jack Daniel's & Hielos Reutilizables</h3>
+                <p>Caja de madera con Jack Daniel's 750ml, vaso roquero y cubos enfriadores de acero.</p>
+                <div class="precio">S/ 145.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 41, 'Box Premium Jack Daniels', 145.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card-producto" data-categoria="cajas">
+            <span class="tag">Elegante</span>
+            <img src="img/para_el/box_desayuno_ejecutivo.jpg" alt="Box Desayuno Caballero" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Desayuno+Ejecutivo'">
+            <div class="card-body">
+                <h3>Box Desayuno "Gentleman Starter"</h3>
+                <p>Café gourmet en prensa francesa, ciabatta artesanal, jugo de naranja y alfajores.</p>
+                <div class="precio">S/ 98.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 42, 'Box Desayuno Gentleman Starter', 98.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/billetera_cuero_grabada.jpg" alt="Billetera de Cuero Grabada" onerror="this.src='https://via.placeholder.com/300x220?text=Billetera+Cuero+Grabada'">
+            <div class="card-body">
+                <h3>Billetera 100% Cuero con Iniciales Grabadas</h3>
+                <p>Billetera elegante de cuero vacuno personalizada con grabado láser en empaque de regalo.</p>
+                <div class="precio">S/ 85.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 43, 'Billetera Cuero Grabada', 85.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card-producto" data-categoria="licores">
+            <img src="img/para_el/pack_cervezas_artesanales.jpg" alt="Pack Cervezas Artesanales" onerror="this.src='https://via.placeholder.com/300x220?text=Pack+Cervezas+Craft'">
+            <div class="card-body">
+                <h3>Pack Cervezas Artesanales & Piqueos</h3>
+                <p>4 cervezas artesanas seleccionadas, frutos secos premium y destapador de madera.</p>
+                <div class="precio">S/ 75.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 44, 'Pack Cervezas Artesanales', 75.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/chopp_cerveza_grabado.jpg" alt="Chopp Cervecero Personalizado" onerror="this.src='https://via.placeholder.com/300x220?text=Chopp+Cervecero+Grabado'">
+            <div class="card-body">
+                <h3>Chopp Pavonado Personalizado (500ml)</h3>
+                <p>Jarra cervecera de vidrio grueso grabada al ácido con su nombre o frase favorita.</p>
+                <div class="precio">S/ 48.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 45, 'Chopp Pavonado Personalizado', 48.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/para_el/caja_parrillera_chef.jpg" alt="Box Parrillero Master" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Parrillero+Master'">
+            <div class="card-body">
+                <h3>Set Parrillero "BBQ Master"</h3>
+                <p>Caja de madera con delantal de cuero sintético, pinzas de acero y especias barbacoa.</p>
+                <div class="precio">S/ 130.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 46, 'Set Parrillero BBQ Master', 130.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/para_el/ramo_chocolates_whisky.jpg" alt="Ramo de Chocolates para Él" onerror="this.src='https://via.placeholder.com/300x220?text=Ramo+Chocolates+Hombre'">
+            <div class="card-body">
+                <h3>Ramo Dulce "Choco-Whisky"</h3>
+                <p>Arreglo estilo ramo en tonos oscuros cargado de Snickers, M&Ms y 2 mini whiskies.</p>
+                <div class="precio">S/ 80.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 47, 'Ramo Dulce Choco Whisky', 80.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/reloj_madera_grabado.jpg" alt="Reloj de Madera Personalizado" onerror="this.src='https://via.placeholder.com/300x220?text=Reloj+Madera+Especial'">
+            <div class="card-body">
+                <h3>Reloj de Pulsera en Madera de Bambú</h3>
+                <p>Reloj artesanal ultraligero grabado con dedicatoria en el reverso de la caja.</p>
+                <div class="precio">S/ 115.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 48, 'Reloj Madera Bambu Grabado', 115.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card-producto" data-categoria="licores">
+            <img src="img/para_el/pisco_personalizado_negro.jpg" alt="Pisco Edición Especial Hombre" onerror="this.src='https://via.placeholder.com/300x220?text=Pisco+Black+Edition'">
+            <div class="card-body">
+                <h3>Pisco Portón Black Edition Personalizado</h3>
+                <p>Botella de Pisco Mosto Verde con etiqueta metálica personalizada en caja mate.</p>
+                <div class="precio">S/ 125.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 49, 'Pisco Porton Black Edition', 125.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/para_el/box_cine_snacks.jpg" alt="Box Noche de Película" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Movie+Night'">
+            <div class="card-body">
+                <h3>Box "Movie & Gamer Night"</h3>
+                <p>Popcorn gigante gourmet, Pringles, golosinas, 2 refrescos y gift card sugerida.</p>
+                <div class="precio">S/ 65.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 50, 'Box Movie Gamer Night', 65.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/neceser_cuero_hombre.jpg" alt="Neceser de Viaje en Cuero" onerror="this.src='https://via.placeholder.com/300x220?text=Neceser+Cuero+Viaje'">
+            <div class="card-body">
+                <h3>Neceser Ejecutivo de Viaje</h3>
+                <p>Bolso organizador en cuero sintético premium con monograma dorado en relieve.</p>
+                <div class="precio">S/ 58.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 51, 'Neceser Ejecutivo de Viaje', 58.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/para_el/caja_ferrero_licor.jpg" alt="Caja Ferrero y Baileys" onerror="this.src='https://via.placeholder.com/300x220?text=Caja+Ferrero+Baileys'">
+            <div class="card-body">
+                <h3>Box Dulce "Baileys & Ferrero"</h3>
+                <p>Botella de Baileys Original 375ml acompañada de 12 bombones Ferrero Rocher.</p>
+                <div class="precio">S/ 92.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 52, 'Box Baileys and Ferrero', 92.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="card-producto" data-categoria="licores">
+            <img src="img/para_el/petaca_acero_grabada.jpg" alt="Petaca Licorera Acero Inox" onerror="this.src='https://via.placeholder.com/300x220?text=Petaca+Acero+Grabada'">
+            <div class="card-body">
+                <h3>Set Petaca Licorera de Acero & Embudo</h3>
+                <p>Petaca de bolsillo metálica en acabado mate con grabado de nombre y estuche.</p>
+                <div class="precio">S/ 42.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 53, 'Set Petaca Licorera Acero', 42.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/termo_digital_hombre.jpg" alt="Termo Inteligente Digital" onerror="this.src='https://via.placeholder.com/300x220?text=Termo+Digital+Inteligente'">
+            <div class="card-body">
+                <h3>Termo Inteligente LED con Sensor de Temp</h3>
+                <p>Termo de acero 500ml con pantalla táctil de temperatura y nombre personalizado.</p>
+                <div class="precio">S/ 45.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 54, 'Termo Inteligente LED', 45.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/para_el/box_vinos_quesos.jpg" alt="Box Vinos y Quesos" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Vinos+y+Quesos'">
+            <div class="card-body">
+                <h3>Box Sommelier "Vino & Tabla Gourmet"</h3>
+                <p>Vino Navarro Correas, tabla para picar de bambú, cuchillos y variedad de quesos.</p>
+                <div class="precio">S/ 150.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 55, 'Box Sommelier Vino y Tabla', 150.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="card-producto" data-categoria="dulces">
+            <img src="img/para_el/caja_frutos_secos_premium.jpg" alt="Caja Frutos Secos" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Frutos+Secos'">
+            <div class="card-body">
+                <h3>Box Healthy "Snack Bar Caballero"</h3>
+                <p>Caja con compartimentos de pistachos, castañas, almendras tostadas y arándanos.</p>
+                <div class="precio">S/ 55.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 56, 'Box Healthy Snack Bar', 55.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/lentes_sol_caja_madera.jpg" alt="Lentes de Sol en Caja Madera" onerror="this.src='https://via.placeholder.com/300x220?text=Lentes+Sol+Caja+Madera'">
+            <div class="card-body">
+                <h3>Lentes de Sol Polarizados con Estuche</h3>
+                <p>Lentes con marco de bambú polarizados UV400 presentados en funda rígida de madera.</p>
+                <div class="precio">S/ 70.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 57, 'Lentes de Sol Polarizados', 70.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="card-producto" data-categoria="licores">
+            <img src="img/para_el/pack_coronas_balde.jpg" alt="Balde Cervecero Corona" onerror="this.src='https://via.placeholder.com/300x220?text=Balde+Cervecero+Corona'">
+            <div class="card-body">
+                <h3>Ice Bucket Corona & Piqueos Salados</h3>
+                <p>Balde metálico para hielo con 6 cervezas Corona Extra y limones frescos.</p>
+                <div class="precio">S/ 88.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 58, 'Ice Bucket Corona Piqueos', 88.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="card-producto" data-categoria="cajas">
+            <img src="img/para_el/box_barberia_grooming.jpg" alt="Set de Barbería Grooming" onerror="this.src='https://via.placeholder.com/300x220?text=Box+Barberia+Grooming'">
+            <div class="card-body">
+                <h3>Set de Cuidado Facial & Barba "Gentleman"</h3>
+                <p>Aceite para barba, cepillo de cerdas cerdas naturales, bálsamo y loción para afeitar.</p>
+                <div class="precio">S/ 89.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 59, 'Set Cuidado Facial Gentleman', 89.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="card-producto" data-categoria="accesorios">
+            <img src="img/para_el/llavero_multitool_titanio.jpg" alt="Llavero Multiherramienta" onerror="this.src='https://via.placeholder.com/300x220?text=Llavero+Multitool'">
+            <div class="card-body">
+                <h3>Llavero Multiherramienta Táctica 10 en 1</h3>
+                <p>Herramienta compacta de acero inoxidable con destapador, navaja y desarmador.</p>
+                <div class="precio">S/ 38.00</div>
+                <button class="btn-agregar" onclick="agregarAlCarrito(this, 60, 'Llavero Multiherramienta Táctica', 38.00)">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Notificación Flotante Toast -->
+<div id="toast" class="toast"></div>
+
+<!--======================
+FOOTER INFO
+========================-->
+<footer>
+
+    <div>
+        <i class="fa-solid fa-box"></i>
+        <h3>Pedidos Personalizados</h3>
+        <p>Creamos el detalle perfecto</p>
+    </div>
+
+    <div>
+        <i class="fa-brands fa-whatsapp"></i>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Escríbenos por WhatsApp</p>
+    </div>
+
+    <div>
+        <i class="fa-solid fa-heart"></i>
+        <h3>Hecho con Amor</h3>
+        <p>Cada detalle importa</p>
+    </div>
+
+</footer>
+
+<script src="para_el.js"></script>
+
+<script src="session-nav.js"></script>
+<script src="img-fallback.js"></script>
+</body>
+</html>
